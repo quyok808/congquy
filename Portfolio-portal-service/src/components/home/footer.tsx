@@ -19,12 +19,10 @@ export function Footer() {
           </div>
 
           <p className="text-muted-foreground mb-4">
-            © 2024 Nguyễn Văn A. Tất cả quyền được bảo lưu.
+            © 2025 Nguyễn Công Quý. All Rights Reserved.
           </p>
 
-          <p className="text-sm text-muted-foreground">
-            Được xây dựng với ❤️ sử dụng Next.js và Tailwind CSS
-          </p>
+          <p className="text-sm text-muted-foreground">From Cong Quy with ❤️</p>
         </div>
       </div>
     </footer>
