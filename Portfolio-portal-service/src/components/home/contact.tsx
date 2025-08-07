@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { Button } from "../ui/button";
 import {
   Card,
   CardContent,
@@ -7,35 +5,12 @@ import {
   CardHeader,
   CardTitle
 } from "../ui/card";
-import { Input } from "../ui/input";
-import { Textarea } from "../ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { AnimatedSection } from "../animated-section";
 import { ADDRESS, EMAIL, PHONE } from "../../constants/home.constants";
 import { QRCodeSVG } from "qrcode.react";
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   return (
     <section id="contact" className="py-20">
       <div className="container mx-auto px-4">
