@@ -4,11 +4,8 @@ import { AnimatedSection } from "../animated-section";
 import { MagneticButton } from "../magnetic-button";
 import { ParticleBackground } from "../particle-background";
 import { CV, LINKEDIN, GITHUB, EMAIL } from "../../constants/home.constants";
-import { useState } from "react";
 
 export function Hero() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <section
       id="home"
@@ -68,7 +65,6 @@ export function Hero() {
                 Xem dự án
               </MagneticButton>
               <MagneticButton
-                // onClick={() => setIsOpen(true)}
                 variant="outline"
                 size="lg"
                 className="text-lg px-10 py-4 border-2 border-gradient rounded-full hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 backdrop-blur-sm"

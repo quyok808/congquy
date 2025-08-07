@@ -1,10 +1,8 @@
 import { useRef, useState } from "react";
-import { Button } from "./ui/button";
+import { Button, type ButtonProps } from "./ui/button";
 
-interface MagneticButtonProps {
+interface MagneticButtonProps extends ButtonProps {
   children: React.ReactNode;
-  className?: string;
-  [key: string]: any;
 }
 
 export function MagneticButton({
