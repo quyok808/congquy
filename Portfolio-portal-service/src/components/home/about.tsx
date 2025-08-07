@@ -1,6 +1,7 @@
 import { Card, CardContent } from "../ui/card";
 import { Code, Palette, Zap } from "lucide-react";
 import { AnimatedSection } from "../animated-section";
+import AvatarImage from "/avatar.jpg";
 
 export function About() {
   return (
@@ -16,16 +17,14 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <AnimatedSection animation="slideRight">
               <div>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Tôi là một Full Stack Developer với hơn 3 năm kinh nghiệm
-                  trong việc phát triển ứng dụng web hiện đại. Tôi đam mê tạo ra
-                  những sản phẩm không chỉ đẹp mắt mà còn mang lại trải nghiệm
-                  tuyệt vời cho người dùng.
-                </p>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Chuyên môn của tôi bao gồm React, Next.js, Node.js, và các
-                  công nghệ cloud hiện đại. Tôi luôn học hỏi và cập nhật những
-                  xu hướng mới nhất trong ngành công nghệ.
+                <p className="text-lg text-muted-foreground mb-6 justify-around">
+                  Graduated with a Bachelor's degree in Software Engineering,
+                  passionate about backend development. Experienced in building
+                  full-stack web applications using ASP.NET Core, Entity
+                  Framework, and SQL Server. Completed internship at FPT
+                  Telecom, working with microservices architecture, Redis, and
+                  Kafka. Proactive, quick learner, and eager to grow in a
+                  professional software development environment.
                 </p>
               </div>
             </AnimatedSection>
@@ -33,8 +32,10 @@ export function About() {
             <AnimatedSection animation="slideLeft" delay={200}>
               <div className="flex justify-center">
                 <img
-                  src="/placeholder.svg?height=300&width=300"
+                  src={AvatarImage}
                   alt="Profile"
+                  height={300}
+                  width={300}
                   className="rounded-full w-64 h-64 object-cover hover-lift"
                 />
               </div>

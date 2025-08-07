@@ -3,8 +3,12 @@ import { TypingAnimation } from "../typing-animation";
 import { AnimatedSection } from "../animated-section";
 import { MagneticButton } from "../magnetic-button";
 import { ParticleBackground } from "../particle-background";
+import { CV, LINKEDIN, GITHUB, EMAIL } from "../../constants/home.constants";
+import { useState } from "react";
 
 export function Hero() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section
       id="home"
@@ -26,7 +30,7 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto mt-10">
           <AnimatedSection animation="fadeIn">
             <div className="mb-8">
               <div className="inline-block p-4 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm border border-white/10 mb-6 animate-pulse-glow">
@@ -36,22 +40,21 @@ export function Hero() {
             <h1 className="text-4xl md:text-7xl font-bold mb-6 leading-tight">
               Xin chào, tôi là <br />
               <span className="animate-text-gradient">
-                <TypingAnimation text="Nguyễn Văn A" speed={150} />
+                <TypingAnimation text="Nguyễn Công Quý" speed={150} />
               </span>
             </h1>
           </AnimatedSection>
 
           <AnimatedSection animation="slideUp" delay={500}>
             <p className="text-xl md:text-3xl text-muted-foreground mb-4 font-light">
-              Full Stack Developer & UI/UX Designer
+              Backend Developer | Full Stack Developer | .NET Developer
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-8 rounded-full"></div>
           </AnimatedSection>
 
           <AnimatedSection animation="slideUp" delay={800}>
-            <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-              Tôi tạo ra những trải nghiệm web hiện đại và thân thiện với người
-              dùng. Chuyên về React, Next.js, và các công nghệ web tiên tiến.
+            <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed italic">
+              “Điều cấm kị nhất là việc nghĩ rằng bản thân sẽ không làm được.”
             </p>
           </AnimatedSection>
 
@@ -65,12 +68,15 @@ export function Hero() {
                 Xem dự án
               </MagneticButton>
               <MagneticButton
+                // onClick={() => setIsOpen(true)}
                 variant="outline"
                 size="lg"
                 className="text-lg px-10 py-4 border-2 border-gradient rounded-full hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 backdrop-blur-sm"
               >
-                <span className="mr-2">📄</span>
-                Tải CV
+                <a href={CV} target="_blank" rel="noopener noreferrer">
+                  <span className="mr-2">📄</span>
+                  Xem CV
+                </a>
               </MagneticButton>
             </div>
           </AnimatedSection>
@@ -82,21 +88,31 @@ export function Hero() {
                 size="icon"
                 className="h-14 w-14 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-purple-500/20 hover:border-blue-500/50 transition-all duration-300"
               >
-                <Github className="h-6 w-6" />
+                <a href={GITHUB} target="_blank" rel="noopener noreferrer">
+                  <Github className="h-6 w-6" />
+                </a>
               </MagneticButton>
               <MagneticButton
                 variant="ghost"
                 size="icon"
                 className="h-14 w-14 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-purple-500/20 hover:border-blue-500/50 transition-all duration-300"
               >
-                <Linkedin className="h-6 w-6" />
+                <a href={LINKEDIN} target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="h-6 w-6" />
+                </a>
               </MagneticButton>
               <MagneticButton
                 variant="ghost"
                 size="icon"
                 className="h-14 w-14 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-purple-500/20 hover:border-blue-500/50 transition-all duration-300"
               >
-                <Mail className="h-6 w-6" />
+                <a
+                  href={`mailto:${EMAIL}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Mail className="h-6 w-6" />
+                </a>
               </MagneticButton>
             </div>
           </AnimatedSection>
