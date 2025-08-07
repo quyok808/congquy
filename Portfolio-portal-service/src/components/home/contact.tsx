@@ -11,6 +11,8 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { AnimatedSection } from "../animated-section";
+import { ADDRESS, EMAIL, PHONE } from "../../constants/home.constants";
+import { QRCodeSVG } from "qrcode.react";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -59,19 +61,19 @@ export function Contact() {
                   <AnimatedSection animation="fadeIn" delay={200}>
                     <div className="flex items-center space-x-3 hover:text-primary transition-colors cursor-pointer">
                       <Mail className="h-5 w-5 text-primary" />
-                      <span>contact@example.com</span>
+                      <span>{EMAIL}</span>
                     </div>
                   </AnimatedSection>
                   <AnimatedSection animation="fadeIn" delay={400}>
                     <div className="flex items-center space-x-3 hover:text-primary transition-colors cursor-pointer">
                       <Phone className="h-5 w-5 text-primary" />
-                      <span>+84 123 456 789</span>
+                      <span>{PHONE}</span>
                     </div>
                   </AnimatedSection>
                   <AnimatedSection animation="fadeIn" delay={600}>
                     <div className="flex items-center space-x-3 hover:text-primary transition-colors cursor-pointer">
                       <MapPin className="h-5 w-5 text-primary" />
-                      <span>Hồ Chí Minh, Việt Nam</span>
+                      <span>{ADDRESS}</span>
                     </div>
                   </AnimatedSection>
                 </div>
@@ -79,51 +81,28 @@ export function Contact() {
             </AnimatedSection>
 
             <AnimatedSection animation="slideLeft" delay={300}>
-              <Card className="hover-lift">
+              <Card className="hover-lift text-center">
                 <CardHeader>
-                  <CardTitle>Gửi tin nhắn</CardTitle>
+                  <CardTitle>Quét mã để liên hệ thông qua Zalo</CardTitle>
                   <CardDescription>
-                    Điền thông tin bên dưới và tôi sẽ phản hồi sớm nhất có thể.
+                    Dùng Zalo để quét mã và kết nối trực tiếp.
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="transform transition-all duration-300 focus-within:scale-105">
-                      <Input
-                        name="name"
-                        placeholder="Họ và tên"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="transition-all duration-300 focus:ring-2 focus:ring-primary"
-                      />
-                    </div>
-                    <div className="transform transition-all duration-300 focus-within:scale-105">
-                      <Input
-                        name="email"
-                        type="email"
-                        placeholder="Email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="transition-all duration-300 focus:ring-2 focus:ring-primary"
-                      />
-                    </div>
-                    <div className="transform transition-all duration-300 focus-within:scale-105">
-                      <Textarea
-                        name="message"
-                        placeholder="Tin nhắn của bạn"
-                        rows={5}
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                        className="transition-all duration-300 focus:ring-2 focus:ring-primary"
-                      />
-                    </div>
-                    <Button type="submit" className="w-full hover-lift">
-                      Gửi tin nhắn
-                    </Button>
-                  </form>
+                <CardContent className="flex justify-center">
+                  <QRCodeSVG
+                    value={`https://zalo.me/${PHONE}`}
+                    size={250}
+                    bgColor="#ffffff"
+                    fgColor="#000000"
+                    level="H"
+                    includeMargin={true}
+                    imageSettings={{
+                      src: "/congquy/zalo_avatar.jpg",
+                      height: 40,
+                      width: 40,
+                      excavate: true
+                    }}
+                  />
                 </CardContent>
               </Card>
             </AnimatedSection>

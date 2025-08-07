@@ -8,7 +8,6 @@ export function Skills() {
       title: "Frontend",
       skills: [
         "React",
-        "Next.js",
         "TypeScript",
         "Tailwind CSS",
         "HTML5",
@@ -18,19 +17,15 @@ export function Skills() {
     },
     {
       title: "Backend",
-      skills: [
-        "Node.js",
-        "Express",
-        "Python",
-        "PostgreSQL",
-        "MongoDB",
-        "REST API",
-        "GraphQL"
-      ]
+      skills: ["C#", "ASP.NET Core", "Node.js", "Express", "REST API"]
+    },
+    {
+      title: "Database",
+      skills: ["SQL Server", "Oracle", "MongoDB", "MySQL"]
     },
     {
       title: "Tools & Others",
-      skills: ["Git", "Docker", "AWS", "Vercel", "Figma", "Photoshop", "Linux"]
+      skills: ["Git", "Docker", "Vercel", "Jira", "PostMan", "Katalon"]
     }
   ];
 
@@ -44,7 +39,7 @@ export function Skills() {
             </h2>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-4">
             {skillCategories.map((category, index) => (
               <AnimatedSection
                 key={index}

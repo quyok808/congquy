@@ -29,7 +29,7 @@ export function Hero() {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto mt-10">
           <AnimatedSection animation="fadeIn">
-            <div className="mb-8">
+            <div className="mb-4">
               <div className="inline-block p-4 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm border border-white/10 mb-6 animate-pulse-glow">
                 <span className="text-2xl">👋</span>
               </div>
@@ -50,13 +50,13 @@ export function Hero() {
           </AnimatedSection>
 
           <AnimatedSection animation="slideUp" delay={800}>
-            <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed italic">
+            <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-3xl mx-auto leading-relaxed italic">
               “Điều cấm kị nhất là việc nghĩ rằng bản thân sẽ không làm được.”
             </p>
           </AnimatedSection>
 
           <AnimatedSection animation="bounceIn" delay={1200}>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
               <MagneticButton
                 size="lg"
                 className="text-lg px-10 py-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white border-0 rounded-full shadow-2xl hover:shadow-blue-500/25"
@@ -78,7 +78,7 @@ export function Hero() {
           </AnimatedSection>
 
           <AnimatedSection animation="fadeIn" delay={1500}>
-            <div className="flex justify-center space-x-8 mb-12">
+            <div className="flex justify-center space-x-8 mb-6">
               <MagneticButton
                 variant="ghost"
                 size="icon"
