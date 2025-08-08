@@ -1,5 +1,3 @@
-// import Link from "next/link"
-// import { notFound } from "next/navigation"
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
@@ -13,14 +11,12 @@ import {
   Calendar,
   User,
   CheckCircle2,
-  Star,
   BarChart3
 } from "lucide-react";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import LazyImage from "../lazy-loading/lazy-image";
 
 export default function ProjectDetailPage() {
-  const navigator = useNavigate();
   const { slug } = useParams<{ slug: string }>();
 
   const project = getProjectBySlug(slug || "");
@@ -60,6 +56,8 @@ export default function ProjectDetailPage() {
                   <Button
                     onClick={() => window.open(project.liveUrl)}
                     className="gap-2"
+                    variant="outline"
+                    style={{ backgroundColor: "#1DA1F2", color: "white" }}
                   >
                     <ExternalLink className="h-4 w-4" />
                     Xem Live
@@ -70,13 +68,16 @@ export default function ProjectDetailPage() {
                     onClick={() => window.open(project.githubUrl)}
                     variant="outline"
                     className="gap-2"
+                    style={{ backgroundColor: "black", color: "white" }}
                   >
                     <Github className="h-4 w-4" />
                     Xem Code
                   </Button>
                 )}
                 <Button
-                  onClick={() => navigator("/congquy/#projects")}
+                  onClick={() => {
+                    window.history.back();
+                  }}
                   variant="ghost"
                   className="gap-2"
                 >
@@ -94,6 +95,8 @@ export default function ProjectDetailPage() {
                   project.image ||
                   "/placeholder.svg?height=600&width=1200&query=project-hero"
                 }
+                width={1200}
+                height={600}
                 alt={`Ảnh hero của ${project.title}`}
                 className="w-full h-full object-cover"
               />
@@ -213,13 +216,14 @@ export default function ProjectDetailPage() {
                     <CardTitle>Đánh giá</CardTitle>
                   </CardHeader>
                   <CardContent className="flex items-center gap-2">
+                    {/* <Star className="h-5 w-5 text-yellow-500" />
                     <Star className="h-5 w-5 text-yellow-500" />
                     <Star className="h-5 w-5 text-yellow-500" />
                     <Star className="h-5 w-5 text-yellow-500" />
-                    <Star className="h-5 w-5 text-yellow-500" />
-                    <Star className="h-5 w-5 text-yellow-500" />
+                    <Star className="h-5 w-5 text-yellow-500" /> */}
                     <span className="text-sm text-muted-foreground">
-                      (demo)
+                      {project.rating?.feedbacks} <br />
+                      Kết quả được lấy từ nguồn: {project.rating?.source}
                     </span>
                   </CardContent>
                 </Card>
@@ -232,7 +236,14 @@ export default function ProjectDetailPage() {
                   </CardHeader>
                   <CardContent className="flex items-center gap-3 text-sm text-muted-foreground">
                     <BarChart3 className="h-5 w-5 text-primary" />
-                    Tối ưu hình ảnh, cache, và prefetch để cải thiện TTFB, FCP.
+                    {(project.performance || []).map((s, i) => (
+                      <div key={i}>
+                        <div className="text-sm">
+                          {s.results} <br />
+                          {s.data}
+                        </div>
+                      </div>
+                    ))}
                   </CardContent>
                 </Card>
               </AnimatedSection>

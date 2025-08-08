@@ -7,43 +7,15 @@ import {
   CardTitle
 } from "../ui/card";
 import { Badge } from "../ui/badge";
-import { ExternalLink, Github } from "lucide-react";
+import { Github, InfoIcon } from "lucide-react";
 import { AnimatedSection } from "../animation/animated-section";
 import { MagneticButton } from "../animation/magnetic-button";
+import { useNavigate } from "react-router-dom";
+import { getProjects } from "../../lib/projects";
 
 export function Projects() {
-  const projects = [
-    {
-      slug: "ecommerce-platform",
-      title: "E-commerce Platform",
-      description:
-        "Nền tảng thương mại điện tử hoàn chỉnh với thanh toán trực tuyến, quản lý kho hàng và dashboard admin.",
-      image: "/placeholder.svg?height=200&width=400",
-      technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      slug: "ecommerce-platform1",
-      title: "Task Management App",
-      description:
-        "Ứng dụng quản lý công việc với tính năng real-time collaboration, drag & drop và notifications.",
-      image: "/placeholder.svg?height=200&width=400",
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      slug: "ecommerce-platform2",
-      title: "Weather Dashboard",
-      description:
-        "Dashboard thời tiết với dự báo 7 ngày, bản đồ tương tác và lưu trữ địa điểm yêu thích.",
-      image: "/placeholder.svg?height=200&width=400",
-      technologies: ["Vue.js", "Express", "OpenWeather API", "Chart.js"],
-      liveUrl: "#",
-      githubUrl: "#"
-    }
-  ];
+  const navigator = useNavigate();
+  const projects = getProjects();
 
   return (
     <section
@@ -113,11 +85,15 @@ export function Projects() {
                   </CardContent>
                   <CardFooter className="flex gap-3">
                     <MagneticButton
+                      onClick={() => {
+                        navigator(`/congquy/project/${project.slug}`);
+                        window.scrollTo(0, 0);
+                      }}
                       size="sm"
                       className="flex-1 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white border-0"
                     >
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Live Demo
+                      <InfoIcon className="h-4 w-4 mr-2" />
+                      Chi tiết
                     </MagneticButton>
                     <MagneticButton
                       variant="outline"

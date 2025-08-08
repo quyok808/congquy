@@ -55,7 +55,8 @@ export function Skills() {
         "Socket TCP/IP",
         "SignalR",
         "JavaFX",
-        "Tailwind CSS"
+        "Tailwind CSS",
+        "Jira"
       ]
     }
   ];
