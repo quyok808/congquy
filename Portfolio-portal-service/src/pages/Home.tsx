@@ -5,7 +5,8 @@ import { Skills } from "../components/home/skills";
 import { Projects } from "../components/home/projects";
 import { Contact } from "../components/home/contact";
 import { Footer } from "../components/home/footer";
-import { ScrollProgress } from "../components/scroll-progress";
+import { ScrollProgress } from "../components/animation/scroll-progress";
+import { Certificates } from "../components/home/certificates";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
+        <Certificates />
         <Projects />
         <Contact />
       </main>

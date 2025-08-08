@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Button, type ButtonProps } from "./ui/button";
+import { Button, type ButtonProps } from "../ui/button";
 
 interface MagneticButtonProps extends ButtonProps {
   children: React.ReactNode;

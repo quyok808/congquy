@@ -8,12 +8,13 @@ import {
 } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { ExternalLink, Github } from "lucide-react";
-import { AnimatedSection } from "../animated-section";
-import { MagneticButton } from "../magnetic-button";
+import { AnimatedSection } from "../animation/animated-section";
+import { MagneticButton } from "../animation/magnetic-button";
 
 export function Projects() {
   const projects = [
     {
+      slug: "ecommerce-platform",
       title: "E-commerce Platform",
       description:
         "Nền tảng thương mại điện tử hoàn chỉnh với thanh toán trực tuyến, quản lý kho hàng và dashboard admin.",
@@ -23,6 +24,7 @@ export function Projects() {
       githubUrl: "#"
     },
     {
+      slug: "ecommerce-platform1",
       title: "Task Management App",
       description:
         "Ứng dụng quản lý công việc với tính năng real-time collaboration, drag & drop và notifications.",
@@ -32,6 +34,7 @@ export function Projects() {
       githubUrl: "#"
     },
     {
+      slug: "ecommerce-platform2",
       title: "Weather Dashboard",
       description:
         "Dashboard thời tiết với dự báo 7 ngày, bản đồ tương tác và lưu trữ địa điểm yêu thích.",
@@ -70,7 +73,7 @@ export function Projects() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <AnimatedSection
-                key={index}
+                key={project.slug}
                 animation="slideUp"
                 delay={index * 200}
               >
@@ -88,6 +91,9 @@ export function Projects() {
                     <CardTitle className="group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-purple-500 group-hover:bg-clip-text transition-all duration-300">
                       {project.title}
                     </CardTitle>
+                    <CardDescription className="text-gray-400 group-hover:text-muted-foreground/30 transition-colors">
+                      {project.slug}
+                    </CardDescription>
                     <CardDescription className="group-hover:text-muted-foreground/80 transition-colors">
                       {project.description}
                     </CardDescription>
