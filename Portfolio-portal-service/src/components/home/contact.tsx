@@ -6,7 +6,7 @@ import {
   CardTitle
 } from "../ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { AnimatedSection } from "../animated-section";
+import { AnimatedSection } from "../animation/animated-section";
 import { ADDRESS, EMAIL, PHONE } from "../../constants/home.constants";
 import { QRCodeSVG } from "qrcode.react";
 
@@ -28,8 +28,8 @@ export function Contact() {
                   Hãy kết nối với tôi
                 </h3>
                 <p className="text-muted-foreground mb-8">
-                  Tôi luôn sẵn sàng thảo luận về các dự án mới, cơ hội hợp tác
-                  hoặc đơn giản chỉ là trò chuyện về công nghệ.
+                  Tôi luôn sẵn sàng thảo luận về các dự án mới, cơ hội hợp tác,
+                  làm việc hoặc đơn giản chỉ là trò chuyện về công nghệ.
                 </p>
 
                 <div className="space-y-4">
@@ -79,6 +79,13 @@ export function Contact() {
                     }}
                   />
                 </CardContent>
+                <p className="text-muted-foreground">
+                  Hoặc truy cập{" "}
+                  <a href={`http://zalo.me/${PHONE}`} target="_blank">
+                    <span className="font-semibold">ZALO</span>
+                  </a>{" "}
+                  để kết nối với tôi!
+                </p>
               </Card>
             </AnimatedSection>
           </div>
