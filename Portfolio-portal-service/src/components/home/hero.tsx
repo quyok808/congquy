@@ -1,9 +1,10 @@
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
-import { TypingAnimation } from "../typing-animation";
-import { AnimatedSection } from "../animated-section";
-import { MagneticButton } from "../magnetic-button";
-import { ParticleBackground } from "../particle-background";
+import { TypingAnimation } from "../animation/typing-animation";
+import { AnimatedSection } from "../animation/animated-section";
+import { MagneticButton } from "../animation/magnetic-button";
+import { ParticleBackground } from "../animation/particle-background";
 import { CV, LINKEDIN, GITHUB, EMAIL } from "../../constants/home.constants";
+import AnimatedBackgroundElements from "../animation/animated-background-elements";
 
 export function Hero() {
   return (
@@ -13,18 +14,7 @@ export function Hero() {
     >
       <ParticleBackground />
 
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-float animate-morphing"></div>
-        <div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-float animate-morphing"
-          style={{ animationDelay: "2s" }}
-        ></div>
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "4s" }}
-        ></div>
-      </div>
+      <AnimatedBackgroundElements />
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto mt-10">
@@ -58,6 +48,11 @@ export function Hero() {
           <AnimatedSection animation="bounceIn" delay={1200}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
               <MagneticButton
+                onClick={() => {
+                  document
+                    .querySelector("#projects")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
                 size="lg"
                 className="text-lg px-10 py-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white border-0 rounded-full shadow-2xl hover:shadow-blue-500/25"
               >

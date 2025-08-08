@@ -1,4 +1,5 @@
-import { AnimatedSection } from "../animated-section";
+import { AnimatedSection } from "../animation/animated-section";
+import LazyImage from "../lazy-loading/lazy-image";
 import AvatarImage from "/avatar.jpg";
 
 export function About() {
@@ -42,7 +43,7 @@ export function About() {
 
             <AnimatedSection animation="slideLeft" delay={200}>
               <div className="flex justify-center">
-                <img
+                <LazyImage
                   src={AvatarImage}
                   alt="Profile"
                   height={400}

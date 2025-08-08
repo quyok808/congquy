@@ -18,7 +18,7 @@ export function Header() {
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <div className="text-2xl font-bold hover:text-primary transition-colors cursor-pointer">
-            Portfolio
+            NGUYEN CONG QUY
           </div>
 
           {/* Desktop Navigation */}
@@ -42,6 +42,13 @@ export function Header() {
               className="hover:text-primary transition-all duration-300 hover:scale-110 relative group"
             >
               Kỹ năng
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+            </button>
+            <button
+              onClick={() => scrollToSection("certificates")}
+              className="hover:text-primary transition-all duration-300 hover:scale-110 relative group"
+            >
+              Chứng chỉ
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button

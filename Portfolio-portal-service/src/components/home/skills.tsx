@@ -1,31 +1,62 @@
 import { Badge } from "../ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { AnimatedSection } from "../animated-section";
+import { AnimatedSection } from "../animation/animated-section";
 
 export function Skills() {
   const skillCategories = [
     {
-      title: "Frontend",
+      title: "Programming Languages",
+      skills: ["Dart", "Javascript", "C#", "Java"]
+    },
+    {
+      title: "Frameworks",
       skills: [
-        "React",
+        "Entity Framework Core",
+        "Spring Boot",
+        "Express.js",
+        "React.js",
         "TypeScript",
-        "Tailwind CSS",
-        "HTML5",
-        "CSS3",
-        "JavaScript"
+        "Flutter"
       ]
     },
     {
-      title: "Backend",
-      skills: ["C#", "ASP.NET Core", "Node.js", "Express", "REST API"]
+      title: "Databases",
+      skills: ["SQL Server", "Oracle", "MongoDB", "MySQL", "Firebase"]
     },
     {
-      title: "Database",
-      skills: ["SQL Server", "Oracle", "MongoDB", "MySQL"]
+      title: "APIs & Authentication",
+      skills: ["RESTful APIs", "JWT", "OAuth2"]
     },
     {
-      title: "Tools & Others",
-      skills: ["Git", "Docker", "Vercel", "Jira", "PostMan", "Katalon"]
+      title: "Design patterns & Architecture",
+      skills: [
+        "Microservices",
+        "Clean Architecture",
+        "Mediator",
+        "Domain-Driven Design"
+      ]
+    },
+    {
+      title: "Testing & Debugging",
+      skills: ["Unit Testing", "Debugging", "Automation Testing"]
+    },
+    {
+      title: "Version Control",
+      skills: ["Git", "GitHub", "GitLab", "Bitbucket"]
+    },
+    {
+      title: "DevOps & Tools",
+      skills: ["Docker", "Vercel", "GitHub Actions", "Render"]
+    },
+    {
+      title: "Others",
+      skills: [
+        "Socket.IO",
+        "Socket TCP/IP",
+        "SignalR",
+        "JavaFX",
+        "Tailwind CSS"
+      ]
     }
   ];
 
