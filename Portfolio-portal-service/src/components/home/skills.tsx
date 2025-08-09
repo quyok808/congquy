@@ -1,62 +1,55 @@
 import { Badge } from "../ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { AnimatedSection } from "../animation/animated-section";
+import {
+  APIS_AND_AUTH,
+  DATABASES,
+  DESIGN_PATTERNS_ARCHITECTURE,
+  DEVOPS_AND_TOOLS,
+  FRAMEWORKS,
+  OTHERS,
+  PROGRAMMING_LANGUAGES,
+  TESTING_AND_DEBUGGING,
+  VERSION_CONTROL
+} from "../../constants/skill.constants";
 
 export function Skills() {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["Dart", "Javascript", "C#", "Java"]
+      skills: Object.values(PROGRAMMING_LANGUAGES)
     },
     {
       title: "Frameworks",
-      skills: [
-        "Entity Framework Core",
-        "Spring Boot",
-        "Express.js",
-        "React.js",
-        "TypeScript",
-        "Flutter"
-      ]
+      skills: Object.values(FRAMEWORKS)
     },
     {
       title: "Databases",
-      skills: ["SQL Server", "Oracle", "MongoDB", "MySQL", "Firebase"]
+      skills: Object.values(DATABASES)
     },
     {
       title: "APIs & Authentication",
-      skills: ["RESTful APIs", "JWT", "OAuth2"]
+      skills: Object.values(APIS_AND_AUTH)
     },
     {
       title: "Design patterns & Architecture",
-      skills: [
-        "Microservices",
-        "Clean Architecture",
-        "Mediator",
-        "Domain-Driven Design"
-      ]
+      skills: Object.values(DESIGN_PATTERNS_ARCHITECTURE)
     },
     {
       title: "Testing & Debugging",
-      skills: ["Unit Testing", "Debugging", "Automation Testing"]
+      skills: Object.values(TESTING_AND_DEBUGGING)
     },
     {
       title: "Version Control",
-      skills: ["Git", "GitHub", "GitLab", "Bitbucket"]
+      skills: Object.values(VERSION_CONTROL)
     },
     {
       title: "DevOps & Tools",
-      skills: ["Docker", "Vercel", "GitHub Actions", "Render"]
+      skills: Object.values(DEVOPS_AND_TOOLS)
     },
     {
       title: "Others",
-      skills: [
-        "Socket.IO",
-        "Socket TCP/IP",
-        "SignalR",
-        "JavaFX",
-        "Tailwind CSS"
-      ]
+      skills: Object.values(OTHERS)
     }
   ];
 

@@ -1,5 +1,3 @@
-// import Link from "next/link"
-// import { notFound } from "next/navigation"
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
@@ -13,14 +11,14 @@ import {
   Calendar,
   User,
   CheckCircle2,
-  Star,
   BarChart3
 } from "lucide-react";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import LazyImage from "../lazy-loading/lazy-image";
+import ReactMarkdown from "react-markdown";
+import ZoomableImage from "../zoomimage";
 
 export default function ProjectDetailPage() {
-  const navigator = useNavigate();
   const { slug } = useParams<{ slug: string }>();
 
   const project = getProjectBySlug(slug || "");
@@ -60,6 +58,8 @@ export default function ProjectDetailPage() {
                   <Button
                     onClick={() => window.open(project.liveUrl)}
                     className="gap-2"
+                    variant="outline"
+                    style={{ backgroundColor: "#1DA1F2", color: "white" }}
                   >
                     <ExternalLink className="h-4 w-4" />
                     Xem Live
@@ -70,13 +70,16 @@ export default function ProjectDetailPage() {
                     onClick={() => window.open(project.githubUrl)}
                     variant="outline"
                     className="gap-2"
+                    style={{ backgroundColor: "black", color: "white" }}
                   >
                     <Github className="h-4 w-4" />
                     Xem Code
                   </Button>
                 )}
                 <Button
-                  onClick={() => navigator("/congquy/#projects")}
+                  onClick={() => {
+                    window.history.back();
+                  }}
                   variant="ghost"
                   className="gap-2"
                 >
@@ -94,6 +97,8 @@ export default function ProjectDetailPage() {
                   project.image ||
                   "/placeholder.svg?height=600&width=1200&query=project-hero"
                 }
+                width={1200}
+                height={600}
                 alt={`Ảnh hero của ${project.title}`}
                 className="w-full h-full object-cover"
               />
@@ -113,8 +118,8 @@ export default function ProjectDetailPage() {
                   <CardHeader>
                     <CardTitle>Tổng quan</CardTitle>
                   </CardHeader>
-                  <CardContent className="text-muted-foreground leading-relaxed">
-                    {project.longDescription}
+                  <CardContent className="text-muted-foreground leading-relaxed markdown prose">
+                    <ReactMarkdown>{project.longDescription}</ReactMarkdown>
                   </CardContent>
                 </Card>
               </AnimatedSection>
@@ -149,13 +154,18 @@ export default function ProjectDetailPage() {
                           key={i}
                           className="overflow-hidden rounded-lg border hover-lift"
                         >
-                          <img
+                          <ZoomableImage
                             src={src || "/placeholder.svg"}
                             alt={`Ảnh ${i + 1} của ${project.title}`}
                             className="w-full h-48 md:h-56 object-cover"
                           />
                         </div>
                       ))}
+                      {(!project.gallery || project.gallery.length === 0) && (
+                        <div className="col-span-3 text-sm text-muted-foreground">
+                          Không có thêm ảnh nào khác cho dự án này
+                        </div>
+                      )}
                     </div>
                   </CardContent>
                 </Card>
@@ -213,13 +223,9 @@ export default function ProjectDetailPage() {
                     <CardTitle>Đánh giá</CardTitle>
                   </CardHeader>
                   <CardContent className="flex items-center gap-2">
-                    <Star className="h-5 w-5 text-yellow-500" />
-                    <Star className="h-5 w-5 text-yellow-500" />
-                    <Star className="h-5 w-5 text-yellow-500" />
-                    <Star className="h-5 w-5 text-yellow-500" />
-                    <Star className="h-5 w-5 text-yellow-500" />
                     <span className="text-sm text-muted-foreground">
-                      (demo)
+                      {project.rating?.feedbacks} <br />
+                      Kết quả được lấy từ nguồn: {project.rating?.source}
                     </span>
                   </CardContent>
                 </Card>
@@ -228,11 +234,26 @@ export default function ProjectDetailPage() {
               <AnimatedSection animation="slideUp" delay={200}>
                 <Card className="bg-card/60 backdrop-blur">
                   <CardHeader>
-                    <CardTitle>Hiệu năng</CardTitle>
+                    <CardTitle>Hiệu năng (Lighthouse)</CardTitle>
                   </CardHeader>
-                  <CardContent className="flex items-center gap-3 text-sm text-muted-foreground">
-                    <BarChart3 className="h-5 w-5 text-primary" />
-                    Tối ưu hình ảnh, cache, và prefetch để cải thiện TTFB, FCP.
+                  <CardContent className="items-center text-sm text-muted-foreground">
+                    {(project.performance || []).map((s, i) => (
+                      <div className="flex items-center gap-2 mb-4">
+                        <BarChart3 className="h-5 w-5 text-primary" />
+                        <div key={i}>
+                          <div className="text-sm font-semibold">
+                            {s.results}
+                          </div>
+                          <div className="text-xs">{s.data}</div>
+                        </div>
+                      </div>
+                    ))}
+                    {(!project.performance ||
+                      project.performance.length === 0) && (
+                      <div className="col-span-3 text-sm text-muted-foreground">
+                        Chưa có số liệu công khai.
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               </AnimatedSection>
@@ -243,8 +264,3 @@ export default function ProjectDetailPage() {
     </main>
   );
 }
-
-// Tùy chọn: Tạo static params để prebuild các trang (nếu cần)
-// export function generateStaticParams() {
-//   return getProjects().map((p) => ({ slug: p.slug }));
-// }
