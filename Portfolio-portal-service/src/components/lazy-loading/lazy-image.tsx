@@ -7,8 +7,9 @@ export default function LazyImage({
   width,
   height,
   className = "",
-  rootMargin = "150px"
-}: LazyImageProps) {
+  rootMargin = "150px",
+  ...rest // nhận các props còn lại như onClick
+}: LazyImageProps & React.ImgHTMLAttributes<HTMLImageElement>) {
   const [visible, setVisible] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -45,6 +46,7 @@ export default function LazyImage({
       className={`transition-all duration-700 ease-out ${
         loaded ? "opacity-100 blur-0" : "opacity-0 blur-md"
       } ${className}`}
+      {...rest} // truyền props xuống <img>
     />
   );
 }
