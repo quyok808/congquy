@@ -86,7 +86,7 @@ export function Projects() {
                   <CardFooter className="flex gap-3">
                     <MagneticButton
                       onClick={() => {
-                        navigator(`/congquy/project/${project.slug}`);
+                        navigator(`/project/${project.slug}`);
                         window.scrollTo(0, 0);
                       }}
                       size="sm"
