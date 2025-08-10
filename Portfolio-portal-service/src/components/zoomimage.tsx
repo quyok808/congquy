@@ -49,13 +49,14 @@ export default function ZoomableImage({
       role="dialog"
       aria-modal="true"
     >
-      {/* nút đóng (stopPropagation để không kích sự kiện của overlay) */}
       <button
         onClick={(e) => {
           e.stopPropagation();
           setIsOpen(false);
         }}
-        className="absolute top-4 right-4 rounded-full p-2 bg-black/40 text-black"
+        className="absolute top-4 right-4 rounded-full p-2 
+           bg-black/40 text-dark 
+           dark:bg-white/20 dark:text-white"
         aria-label="Đóng"
       >
         ✕

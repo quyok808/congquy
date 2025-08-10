@@ -96,9 +96,18 @@ export function Projects() {
                       Chi tiết
                     </MagneticButton>
                     <MagneticButton
+                      onClick={() => {
+                        if (project.githubUrl) {
+                          window.open(
+                            project.githubUrl,
+                            "_blank",
+                            "noopener,noreferrer"
+                          );
+                        }
+                      }}
                       variant="outline"
                       size="sm"
-                      className="flex-1 border-white/20 hover:bg-white/10"
+                      className="flex-1 border-white/20 hover:bg-white/10 dark:bg-white/20 dark:text-white"
                     >
                       <Github className="h-4 w-4 mr-2" />
                       Code
