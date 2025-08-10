@@ -224,8 +224,14 @@ export default function ProjectDetailPage() {
                   </CardHeader>
                   <CardContent className="flex items-center gap-2">
                     <span className="text-sm text-muted-foreground">
-                      {project.rating?.feedbacks} <br />
-                      Kết quả được lấy từ nguồn: {project.rating?.source}
+                      {project.rating?.feedbacks != "" ? (
+                        <>
+                          {project.rating?.feedbacks} <br />
+                          Kết quả được lấy từ nguồn: {project.rating?.source}
+                        </>
+                      ) : (
+                        "Chưa có số liệu công khai."
+                      )}
                     </span>
                   </CardContent>
                 </Card>
