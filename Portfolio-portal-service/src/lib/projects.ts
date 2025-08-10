@@ -14,12 +14,28 @@ const projects: Project[] = [
     slug: "deceptive-draw-game",
     title: "Deceptive Draw Game",
     description: "Card game that uses the power of AI to trick the player.",
-    longDescription: `The Deceptive Draw Game is a card game where the AI analyzes the cards in your hand, the current situation, and your play history to predict the probability (%) of you choosing each card. These predictions allow the AI to devise counter-strategies, creating intense mind battles between human and machine.
-    
+    longDescription: `
+  
+  The Deceptive Draw Game is a card game where the AI analyzes the cards in your hand, the current situation, and your play history to predict the probability (%) of you choosing each card. These predictions allow the AI to devise counter-strategies, creating intense mind battles between human and machine.
+  
+  ### Tính năng
+  - Chia bài và chỉ định bài mà người chơi cần phải đánh.
+  - Bắt người ra bài trong lượt vừa rồi.
+  - Thêm Bot vào màn chơi
+
+  ### Công nghệ sử dụng
+
+  - Frontend: ReactJs
+  - Backend: NodeJS + Socket.io
+
   **Dữ liệu test ngày 09/08/2025**
     `,
     image: "/congquy/projects/deceptive-draw-game/GameCard.png",
-    gallery: [],
+    gallery: [
+      "/congquy/projects/deceptive-draw-game/GameCard.png",
+      "/congquy/projects/deceptive-draw-game/lib/Picture1.png",
+      "/congquy/projects/deceptive-draw-game/lib/Picture2.png"
+    ],
     technologies: [
       APIS_AND_AUTH.RESTFUL_APIS,
       OTHERS.SOCKET_IO,
@@ -62,7 +78,7 @@ const projects: Project[] = [
       }
     ],
     rating: {
-      feedbacks: "Chạy ổn định, chơi vui, có yếu tố giải trí, chiến thuật",
+      feedbacks: "Chơi vui, có yếu tố giải trí, chiến thuật",
       source: "Dữ liệu từ 3 người bạn thử nghiệm"
     }
   },
@@ -71,7 +87,9 @@ const projects: Project[] = [
     title: "Skill Exchange Platform",
     description: "Card game that uses the power of AI to trick the player.",
     longDescription: `
-  ## Features
+  This platform allow users to connect with each other and exchange skills and knowledge.
+
+  ### Features
   **1. Real-time chatting**
   - Using Socket.io for real-time communication between users. Can send and receive multimedia include: text, images, and files in real-time.
   
@@ -89,6 +107,13 @@ const projects: Project[] = [
 
   **6. User management**
   - Admin can manage user roles, permissions, and lock user account.
+
+  ### Technologies
+  - Frontend: ReactJs
+  - Backend: NodeJS
+  - Authentication: JWT
+  - Database: MongoDB
+  - Others: Socket.io, WebRTC
 
   **Dữ liệu test ngày 09/08/2025**`,
     image: "/congquy/projects/skill-exchange-platform/SE.png",
@@ -119,7 +144,8 @@ const projects: Project[] = [
       DEVOPS_AND_TOOLS.RENDER,
       DATABASES.MONGODB,
       APIS_AND_AUTH.JWT,
-      OTHERS.TAILWIND_CSS
+      OTHERS.TAILWIND_CSS,
+      "WebRTC"
     ],
     liveUrl: "https://onlyaclassroom.edu.vn/",
     githubUrl: "https://github.com/quyok808/Skill-Exchange-Website-BE",
@@ -171,11 +197,46 @@ const projects: Project[] = [
     description:
       "Mobile app for learning English vocabulary with flashcards and games.",
     longDescription: `
-  # To do
+  This app is a mobile app for learning English vocabulary with flashcards and games. It includes features such as dictionary searching, 
+  flashcards, analyze essay, and vocabulary game.
+
+  ### Features
+
+  **1. Dictionary Searching**
+  - Users can search for words and definitions in the dictionary.
+
+  **2. Flashcards**
+  - Users can create and study flashcards for vocabulary.
+
+  **3. Analyze Essay**
+  - Users can analyze their essay and identify grammar errors.
+
+  **4. Vocabulary Game**
+  - Users can play a vocabulary game to improve their vocabulary knowledge.
+
+  ### Technologies Used
+
+  - **Dart**: Programming language for building mobile apps.
+  - **Flutter**: Framework for building cross-platform mobile apps.
+  - **Firebase**: Database for storing user data and authentication.
   `,
     image:
       "/congquy/projects/english-vocabulary-learning-app/Mobile_English.png",
-    gallery: [],
+    gallery: [
+      "/congquy/projects/english-vocabulary-learning-app/Mobile_English.png",
+      "/congquy/projects/english-vocabulary-learning-app/lib/Picture1.png",
+      "/congquy/projects/english-vocabulary-learning-app/lib/Picture2.png",
+      "/congquy/projects/english-vocabulary-learning-app/lib/Picture3.png",
+      "/congquy/projects/english-vocabulary-learning-app/lib/Picture4.png",
+      "/congquy/projects/english-vocabulary-learning-app/lib/Picture5.png",
+      "/congquy/projects/english-vocabulary-learning-app/lib/Picture6.png",
+      "/congquy/projects/english-vocabulary-learning-app/lib/Picture7.png",
+      "/congquy/projects/english-vocabulary-learning-app/lib/Picture8.png",
+      "/congquy/projects/english-vocabulary-learning-app/lib/Picture9.png",
+      "/congquy/projects/english-vocabulary-learning-app/lib/Picture10.png",
+      "/congquy/projects/english-vocabulary-learning-app/lib/Picture11.png",
+      "/congquy/projects/english-vocabulary-learning-app/lib/Picture12.png"
+    ],
     technologies: [
       PROGRAMMING_LANGUAGES.DART,
       FRAMEWORKS.FLUTTER,
@@ -197,7 +258,7 @@ const projects: Project[] = [
     performance: [],
     rating: {
       feedbacks: "",
-      source: "Dữ liệu từ 3 người bạn thử nghiệm"
+      source: ""
     }
   },
   {
@@ -206,7 +267,20 @@ const projects: Project[] = [
     description:
       "Olympia Game App is a Java Swing-based quiz game that simulates a TV-style game show with multiplayer support and score tracking.",
     longDescription: `
-  # To do
+  Olympia Game App is a Java Swing-based quiz game that simulates a TV-style game show with multiplayer support and score tracking.
+
+  ## Features
+
+  - **Ranking**: Users can view the ranking of players based on their scores.
+  - **OLYMPIA Game Show**: A TV-style game show with multiplayer support.
+  - **Multiplayer**: Users can play against other players in real-time.
+  - **Score Tracking**: Keep track of the score of each player.
+
+  ## Technologies Used
+
+  - **Java**: Programming language for building desktop applications.
+  - **JavaFX**: Framework for building Java Swing-based applications.
+  - **MySQL**: Database for storing user data and authentication.
   `,
     image: "/congquy/projects/olympia-game-app/GameShow_Olympya.png",
     gallery: [],
@@ -230,7 +304,7 @@ const projects: Project[] = [
     performance: [],
     rating: {
       feedbacks: "",
-      source: "Dữ liệu từ 3 người bạn thử nghiệm"
+      source: ""
     }
   },
   {
@@ -240,47 +314,52 @@ const projects: Project[] = [
       "This project is a comprehensive Online Classroom Management Website designed to streamline the management of virtual classrooms. It provides a robust set of features for managing users, classes, students, attendance, grading, online learning, and real-time communication within a class using SignalR.",
     longDescription: `
   ## Features
+  This project is a comprehensive Online Classroom Management Website designed to streamline the management of virtual classrooms. It provides a robust set of features for managing users, classes, students, attendance, grading, online learning, and real-time communication within a class using SignalR.
+  
+  **1. Authentication**
+  - Users can register and log in using email and password.
+  - Admins can manage user roles and permissions.
 
-  **1. Classroom Management**
+  **2. Classroom Management**
 
   - View and manage all classrooms in a centralized index.
   - Create new classes with customizable settings.
   - Join existing classes as a student or instructor.
 
-  **2. Assignment Management**
+  **3. Assignment Management**
 
   - Create, distribute, and manage assignments for each class.
   - Grade assignments and provide feedback to students.
 
-  **3. Student Management**
+  **4. Student Management**
 
   - Maintain and update student rosters for each class.
   - Track student participation and performance.
 
-  **4. Real-Time Communication**
+  **5. Real-Time Communication**
 
   - Enable in-class messaging and discussions using SignalR for seamless, real-time 
   interaction.
 
-  **5. Grade Management**
+  **6. Grade Management**
 
   - Maintain and update gradebooks for tracking student performance across 
   assignments and exams.
 
-  **6. Schedule Management**
+  **7. Schedule Management**
 
   - Create and manage class schedules to keep students and instructors organized.
 
-  **7. Class Customization**
+  **8. Class Customization**
 
   - Customize class settings, layouts, and configurations to suit specific teaching 
   needs.
 
-  **8. Notifications**
+  **9. Notifications**
 
   - Send and manage class-wide announcements and notifications.
 
-  **9. Content Reuse**
+  **10. Content Reuse**
 
   - Reuse posts, lectures, and assignments from other classes to save time and 
   maintain consistency.
@@ -296,7 +375,24 @@ const projects: Project[] = [
   `,
     image:
       "/congquy/projects/online-classroom-management/78796d07e4792bb818cb079a1b57a791.jpg",
-    gallery: [],
+    gallery: [
+      "/congquy/projects/online-classroom-management/78796d07e4792bb818cb079a1b57a791.jpg",
+      "/congquy/projects/online-classroom-management/lib/Picture1.png",
+      "/congquy/projects/online-classroom-management/lib/Picture2.png",
+      "/congquy/projects/online-classroom-management/lib/Picture3.png",
+      "/congquy/projects/online-classroom-management/lib/Picture4.png",
+      "/congquy/projects/online-classroom-management/lib/Picture5.png",
+      "/congquy/projects/online-classroom-management/lib/Picture6.png",
+      "/congquy/projects/online-classroom-management/lib/Picture7.png",
+      "/congquy/projects/online-classroom-management/lib/Picture8.png",
+      "/congquy/projects/online-classroom-management/lib/Picture9.png",
+      "/congquy/projects/online-classroom-management/lib/Picture10.png",
+      "/congquy/projects/online-classroom-management/lib/Picture11.png",
+      "/congquy/projects/online-classroom-management/lib/Picture12.png",
+      "/congquy/projects/online-classroom-management/lib/Picture13.png",
+      "/congquy/projects/online-classroom-management/lib/Picture14.png",
+      "/congquy/projects/online-classroom-management/lib/Picture15.png"
+    ],
     technologies: [
       PROGRAMMING_LANGUAGES.C_SHARP,
       PROGRAMMING_LANGUAGES.JAVASCRIPT,
@@ -321,7 +417,7 @@ const projects: Project[] = [
     performance: [],
     rating: {
       feedbacks: "Điểm đồ án: 8.5/10",
-      source: "Dữ liệu từ 3 người bạn thử nghiệm, giảng viên đánh giá"
+      source: "Giảng viên đánh giá"
     }
   },
   {
@@ -329,37 +425,18 @@ const projects: Project[] = [
     title: "Supermarket Management Website",
     description:
       "Nền tảng thương mại điện tử với thanh toán online, quản lý kho và dashboard admin.",
-    longDescription:
-      "The supermarket management project is a software system that helps manage inventory, sales, payments, and staff, optimizing operational processes and improving business efficiency.",
+    longDescription: `The supermarket management project is a software system that helps manage inventory, sales, payments, and staff, optimizing operational processes and improving business efficiency.`,
     image: "/congquy/projects/supermarket-management-website/QLST.jpg",
-    gallery: [
-      "/placeholder.svg?height=600&width=1200",
-      "/placeholder.svg?height=600&width=1200",
-      "/placeholder.svg?height=600&width=1200"
-    ],
+    gallery: [],
     technologies: ["Java Spring Boot", "MySQL", "Restful APIs", "React.js"],
     liveUrl: "",
     githubUrl: "https://github.com/quyok808/QLST",
     date: "2024-09",
     role: "Full Stack Developer",
     highlights: ["Admin dashboard trực quan"],
-    stats: [
-      { label: "Performance", value: "95/100" },
-      { label: "Accessibility", value: "90/100" },
-      { label: "Best Practices", value: "90/100" },
-      { label: "SEO", value: "95/100" },
-      { label: "TBT (Total Blocking Time)", value: "0.5s" },
-      { label: "FCP (First Contentful Paint)", value: "0.7s" },
-      { label: "LCP (Largest Contentful Paint)", value: "1.7s" },
-      { label: "CLS (Cumulative Layout Shift)", value: "0.1s" }
-    ],
-    performance: [
-      {
-        data: "500 sản phẩm, 1000 người, 1000 đơn hàng",
-        results: "Hệ thống chạy ổn định"
-      }
-    ],
-    rating: { feedbacks: "4.5", source: "Google" }
+    stats: [],
+    performance: [],
+    rating: { feedbacks: "", source: "" }
   }
 ];
 
