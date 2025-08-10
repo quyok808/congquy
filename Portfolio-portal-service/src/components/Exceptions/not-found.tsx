@@ -32,7 +32,7 @@ export default function NotFound() {
           <AnimatedSection animation="slideUp" delay={150}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10">
               <Button
-                onClick={() => navigator("/congquy")}
+                onClick={() => navigator("/")}
                 className="gap-2"
                 variant="outline"
               >
