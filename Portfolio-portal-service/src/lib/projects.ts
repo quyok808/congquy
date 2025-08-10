@@ -30,11 +30,11 @@ const projects: Project[] = [
 
   **Dữ liệu test ngày 09/08/2025**
     `,
-    image: "/congquy/projects/deceptive-draw-game/GameCard.png",
+    image: "/projects/deceptive-draw-game/GameCard.png",
     gallery: [
-      "/congquy/projects/deceptive-draw-game/GameCard.png",
-      "/congquy/projects/deceptive-draw-game/lib/Picture1.png",
-      "/congquy/projects/deceptive-draw-game/lib/Picture2.png"
+      "/projects/deceptive-draw-game/GameCard.png",
+      "/projects/deceptive-draw-game/lib/Picture1.png",
+      "/projects/deceptive-draw-game/lib/Picture2.png"
     ],
     technologies: [
       APIS_AND_AUTH.RESTFUL_APIS,
@@ -116,24 +116,24 @@ const projects: Project[] = [
   - Others: Socket.io, WebRTC
 
   **Dữ liệu test ngày 09/08/2025**`,
-    image: "/congquy/projects/skill-exchange-platform/SE.png",
+    image: "/projects/skill-exchange-platform/SE.png",
     gallery: [
-      "/congquy/projects/skill-exchange-platform/lib/Picture1.png",
-      "/congquy/projects/skill-exchange-platform/lib/Picture2.png",
-      "/congquy/projects/skill-exchange-platform/lib/Picture3.png",
-      "/congquy/projects/skill-exchange-platform/lib/Picture4.png",
-      "/congquy/projects/skill-exchange-platform/lib/Picture5.png",
-      "/congquy/projects/skill-exchange-platform/lib/Picture6.png",
-      "/congquy/projects/skill-exchange-platform/lib/Picture7.png",
-      "/congquy/projects/skill-exchange-platform/lib/Picture8.png",
-      "/congquy/projects/skill-exchange-platform/lib/Picture9.png",
-      "/congquy/projects/skill-exchange-platform/lib/Picture10.png",
-      "/congquy/projects/skill-exchange-platform/lib/Picture11.png",
-      "/congquy/projects/skill-exchange-platform/lib/Picture12.png",
-      "/congquy/projects/skill-exchange-platform/lib/Picture13.png",
-      "/congquy/projects/skill-exchange-platform/lib/Picture14.png",
-      "/congquy/projects/skill-exchange-platform/lib/Picture15.png",
-      "/congquy/projects/skill-exchange-platform/lib/Picture16.png"
+      "/projects/skill-exchange-platform/lib/Picture1.png",
+      "/projects/skill-exchange-platform/lib/Picture2.png",
+      "/projects/skill-exchange-platform/lib/Picture3.png",
+      "/projects/skill-exchange-platform/lib/Picture4.png",
+      "/projects/skill-exchange-platform/lib/Picture5.png",
+      "/projects/skill-exchange-platform/lib/Picture6.png",
+      "/projects/skill-exchange-platform/lib/Picture7.png",
+      "/projects/skill-exchange-platform/lib/Picture8.png",
+      "/projects/skill-exchange-platform/lib/Picture9.png",
+      "/projects/skill-exchange-platform/lib/Picture10.png",
+      "/projects/skill-exchange-platform/lib/Picture11.png",
+      "/projects/skill-exchange-platform/lib/Picture12.png",
+      "/projects/skill-exchange-platform/lib/Picture13.png",
+      "/projects/skill-exchange-platform/lib/Picture14.png",
+      "/projects/skill-exchange-platform/lib/Picture15.png",
+      "/projects/skill-exchange-platform/lib/Picture16.png"
     ],
     technologies: [
       APIS_AND_AUTH.RESTFUL_APIS,
@@ -220,22 +220,21 @@ const projects: Project[] = [
   - **Flutter**: Framework for building cross-platform mobile apps.
   - **Firebase**: Database for storing user data and authentication.
   `,
-    image:
-      "/congquy/projects/english-vocabulary-learning-app/Mobile_English.png",
+    image: "/projects/english-vocabulary-learning-app/Mobile_English.png",
     gallery: [
-      "/congquy/projects/english-vocabulary-learning-app/Mobile_English.png",
-      "/congquy/projects/english-vocabulary-learning-app/lib/Picture1.png",
-      "/congquy/projects/english-vocabulary-learning-app/lib/Picture2.png",
-      "/congquy/projects/english-vocabulary-learning-app/lib/Picture3.png",
-      "/congquy/projects/english-vocabulary-learning-app/lib/Picture4.png",
-      "/congquy/projects/english-vocabulary-learning-app/lib/Picture5.png",
-      "/congquy/projects/english-vocabulary-learning-app/lib/Picture6.png",
-      "/congquy/projects/english-vocabulary-learning-app/lib/Picture7.png",
-      "/congquy/projects/english-vocabulary-learning-app/lib/Picture8.png",
-      "/congquy/projects/english-vocabulary-learning-app/lib/Picture9.png",
-      "/congquy/projects/english-vocabulary-learning-app/lib/Picture10.png",
-      "/congquy/projects/english-vocabulary-learning-app/lib/Picture11.png",
-      "/congquy/projects/english-vocabulary-learning-app/lib/Picture12.png"
+      "/projects/english-vocabulary-learning-app/Mobile_English.png",
+      "/projects/english-vocabulary-learning-app/lib/Picture1.png",
+      "/projects/english-vocabulary-learning-app/lib/Picture2.png",
+      "/projects/english-vocabulary-learning-app/lib/Picture3.png",
+      "/projects/english-vocabulary-learning-app/lib/Picture4.png",
+      "/projects/english-vocabulary-learning-app/lib/Picture5.png",
+      "/projects/english-vocabulary-learning-app/lib/Picture6.png",
+      "/projects/english-vocabulary-learning-app/lib/Picture7.png",
+      "/projects/english-vocabulary-learning-app/lib/Picture8.png",
+      "/projects/english-vocabulary-learning-app/lib/Picture9.png",
+      "/projects/english-vocabulary-learning-app/lib/Picture10.png",
+      "/projects/english-vocabulary-learning-app/lib/Picture11.png",
+      "/projects/english-vocabulary-learning-app/lib/Picture12.png"
     ],
     technologies: [
       PROGRAMMING_LANGUAGES.DART,
@@ -282,7 +281,7 @@ const projects: Project[] = [
   - **JavaFX**: Framework for building Java Swing-based applications.
   - **MySQL**: Database for storing user data and authentication.
   `,
-    image: "/congquy/projects/olympia-game-app/GameShow_Olympya.png",
+    image: "/projects/olympia-game-app/GameShow_Olympya.png",
     gallery: [],
     technologies: [
       PROGRAMMING_LANGUAGES.JAVA,
@@ -374,24 +373,24 @@ const projects: Project[] = [
   - **Bootstrap**: For responsive and modern UI design.
   `,
     image:
-      "/congquy/projects/online-classroom-management/78796d07e4792bb818cb079a1b57a791.jpg",
+      "/projects/online-classroom-management/78796d07e4792bb818cb079a1b57a791.jpg",
     gallery: [
-      "/congquy/projects/online-classroom-management/78796d07e4792bb818cb079a1b57a791.jpg",
-      "/congquy/projects/online-classroom-management/lib/Picture1.png",
-      "/congquy/projects/online-classroom-management/lib/Picture2.png",
-      "/congquy/projects/online-classroom-management/lib/Picture3.png",
-      "/congquy/projects/online-classroom-management/lib/Picture4.png",
-      "/congquy/projects/online-classroom-management/lib/Picture5.png",
-      "/congquy/projects/online-classroom-management/lib/Picture6.png",
-      "/congquy/projects/online-classroom-management/lib/Picture7.png",
-      "/congquy/projects/online-classroom-management/lib/Picture8.png",
-      "/congquy/projects/online-classroom-management/lib/Picture9.png",
-      "/congquy/projects/online-classroom-management/lib/Picture10.png",
-      "/congquy/projects/online-classroom-management/lib/Picture11.png",
-      "/congquy/projects/online-classroom-management/lib/Picture12.png",
-      "/congquy/projects/online-classroom-management/lib/Picture13.png",
-      "/congquy/projects/online-classroom-management/lib/Picture14.png",
-      "/congquy/projects/online-classroom-management/lib/Picture15.png"
+      "/projects/online-classroom-management/78796d07e4792bb818cb079a1b57a791.jpg",
+      "/projects/online-classroom-management/lib/Picture1.png",
+      "/projects/online-classroom-management/lib/Picture2.png",
+      "/projects/online-classroom-management/lib/Picture3.png",
+      "/projects/online-classroom-management/lib/Picture4.png",
+      "/projects/online-classroom-management/lib/Picture5.png",
+      "/projects/online-classroom-management/lib/Picture6.png",
+      "/projects/online-classroom-management/lib/Picture7.png",
+      "/projects/online-classroom-management/lib/Picture8.png",
+      "/projects/online-classroom-management/lib/Picture9.png",
+      "/projects/online-classroom-management/lib/Picture10.png",
+      "/projects/online-classroom-management/lib/Picture11.png",
+      "/projects/online-classroom-management/lib/Picture12.png",
+      "/projects/online-classroom-management/lib/Picture13.png",
+      "/projects/online-classroom-management/lib/Picture14.png",
+      "/projects/online-classroom-management/lib/Picture15.png"
     ],
     technologies: [
       PROGRAMMING_LANGUAGES.C_SHARP,
@@ -426,7 +425,7 @@ const projects: Project[] = [
     description:
       "Nền tảng thương mại điện tử với thanh toán online, quản lý kho và dashboard admin.",
     longDescription: `The supermarket management project is a software system that helps manage inventory, sales, payments, and staff, optimizing operational processes and improving business efficiency.`,
-    image: "/congquy/projects/supermarket-management-website/QLST.jpg",
+    image: "/projects/supermarket-management-website/QLST.jpg",
     gallery: [],
     technologies: ["Java Spring Boot", "MySQL", "Restful APIs", "React.js"],
     liveUrl: "",
