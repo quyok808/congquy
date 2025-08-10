@@ -72,7 +72,7 @@ export function Contact() {
                     level="H"
                     includeMargin={true}
                     imageSettings={{
-                      src: "/congquy/zalo_avatar.jpg",
+                      src: "/zalo_avatar.jpg",
                       height: 40,
                       width: 40,
                       excavate: true
