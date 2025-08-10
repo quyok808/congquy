@@ -1,5 +1,5 @@
 import { Github, Linkedin, Mail } from "lucide-react";
-import { Button } from "../ui/button";
+import { EMAIL, GITHUB, LINKEDIN } from "../../constants/home.constants";
 
 export function Footer() {
   return (
@@ -7,15 +7,30 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex justify-center space-x-6 mb-8">
-            <Button variant="ghost" size="icon">
+            <button
+              className="bg-black/40 text-dark dark:bg-white/20 dark:text-white"
+              onClick={() => {
+                window.open(GITHUB, "_blank", "noopener,noreferrer");
+              }}
+            >
               <Github className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon">
+            </button>
+            <button
+              className="bg-black/40 text-dark dark:bg-white/20 dark:text-white"
+              onClick={() => {
+                window.open(LINKEDIN, "_blank", "noopener,noreferrer");
+              }}
+            >
               <Linkedin className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon">
+            </button>
+            <button
+              className="bg-black/40 text-dark dark:bg-white/20 dark:text-white"
+              onClick={() => {
+                window.open(`mailto:${EMAIL}`, "_blank", "noopener,noreferrer");
+              }}
+            >
               <Mail className="h-5 w-5" />
-            </Button>
+            </button>
           </div>
 
           <p className="text-muted-foreground mb-4">
