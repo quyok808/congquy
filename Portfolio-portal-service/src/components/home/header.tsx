@@ -65,6 +65,15 @@ export function Header() {
               Liên hệ
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </button>
+            <button
+              onClick={() => {
+                const element = document.getElementById("qr");
+                element?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="hover:text-primary transition-all duration-300 hover:scale-110 relative group"
+            >
+              Xem QR
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
