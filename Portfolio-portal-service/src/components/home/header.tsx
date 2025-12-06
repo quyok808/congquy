@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Button } from "../ui/button";
 import { Menu, X } from "lucide-react";
 
 export function Header() {
@@ -77,9 +76,7 @@ export function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
+          <button
             className="md:hidden hover:scale-110 transition-transform"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -88,7 +85,7 @@ export function Header() {
             ) : (
               <Menu className="h-6 w-6" />
             )}
-          </Button>
+          </button>
         </nav>
 
         {/* Mobile Navigation */}
@@ -124,6 +121,15 @@ export function Header() {
                 className="text-left hover:text-primary transition-all duration-300 hover:translate-x-2"
               >
                 Liên hệ
+              </button>
+              <button
+                onClick={() => {
+                  const element = document.getElementById("qr");
+                  element?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="text-left hover:text-primary transition-all duration-300 hover:translate-x-2"
+              >
+                Xem QR
               </button>
             </div>
           </div>
