@@ -3,25 +3,25 @@ import { cn } from "../../lib/utils";
 import React from "react";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none disabled:opacity-50 disabled:pointer-events-none",
+  "cursor-pointer inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none disabled:opacity-50 disabled:pointer-events-none",
   {
     variants: {
       variant: {
-        default: "bg-blue-600 text-white hover:bg-blue-700",
+        default: "bg-blue-600 text-black hover:bg-gray-200",
         ghost: "bg-transparent hover:bg-gray-100 text-gray-800",
-        outline: "border border-gray-300 text-gray-700 hover:bg-gray-100"
+        outline: "border border-gray-300 text-gray-700 hover:bg-gray-100",
       },
       size: {
         default: "h-10 px-4 py-2",
         icon: "h-10 w-10",
         sm: "h-8 px-3 text-sm",
-        lg: "h-12 px-8 text-lg"
-      }
+        lg: "h-12 px-8 text-lg",
+      },
     },
     defaultVariants: {
       variant: "default",
-      size: "default"
-    }
+      size: "default",
+    },
   }
 );
 
